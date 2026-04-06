@@ -40,4 +40,52 @@ public class AVLTree {
 
         return y;
     }
+
+    // 1. The Public Entry Point
+public void insert(Player player) {
+    root = insert(root, player);
+}
+
+private Node insert(Node node, Player player) {
+
+    if (node == null) {
+        return new Node(player); 
+    }
+
+    if (player.getPlayerID() < node.player.getPlayerID()) {
+        node.left = insert(node.left, player); 
+    } else if (player.getPlayerID() > node.player.getPlayerID()) {
+        node.right = insert(node.right, player); 
+    } else {
+        return node; // ID already exists, do nothing
+    }
+
+    //  Update Height
+    node.height = 1 + Math.max(height(node.left), height(node.right));
+    int balance = getBalance(node);
+    
+    // Case 1: Left-Left (LL)
+    if (balance > 1 && player.getPlayerID() < node.left.player.getPlayerID()) {
+        return rightRotate(node);
+    }
+
+    // Case 2: Right-Right (RR)
+    if (balance < -1 && player.getPlayerID() > node.right.player.getPlayerID()) {
+        return leftRotate(node);
+    }
+
+    // Case 3: Left-Right (LR)
+    if (balance > 1 && player.getPlayerID() > node.left.player.getPlayerID()) {
+        node.left = leftRotate(node.left);
+        return rightRotate(node);
+    }
+
+    // Case 4: Right-Left (RL)
+    if (balance < -1 && player.getPlayerID() < node.right.player.getPlayerID()) {
+        node.right = rightRotate(node.right);
+        return leftRotate(node);
+    }
+
+    return node; 
+}
 }
