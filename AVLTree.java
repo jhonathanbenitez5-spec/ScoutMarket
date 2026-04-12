@@ -88,4 +88,21 @@ private Node insert(Node node, Player player) {
 
     return node; 
 }
+// Public search
+public Player search(int playerID) {
+    Node result = search(root, playerID);
+    if (result == null) return null;
+    return result.player;
+}
+
+// Private recursive search
+private Node search(Node node, int playerID) {
+    if (node == null || node.player.getPlayerID() == playerID) {
+        return node;
+    }
+    if (node.player.getPlayerID() < playerID) {
+        return search(node.right, playerID);
+    }
+    return search(node.left, playerID);
+}
 }
