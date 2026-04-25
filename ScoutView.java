@@ -1,4 +1,7 @@
 import java.util.Scanner;
+
+import src.main.java.com.scoutmarket.Player;
+
 import java.util.ArrayList;
 
 public class ScoutView {

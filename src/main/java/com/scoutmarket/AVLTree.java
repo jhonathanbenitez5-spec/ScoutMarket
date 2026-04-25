@@ -1,3 +1,8 @@
+package com.scoutmarket;
+
+import org.springframework.stereotype.Service;
+
+@Service
 public class AVLTree {
     private Node root;
 

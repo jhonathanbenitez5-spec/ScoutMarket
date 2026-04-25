@@ -1,5 +1,9 @@
 import java.util.ArrayList;
 
+import com.scoutmarket.AVLTree;
+import com.scoutmarket.MaxHeap;
+import com.scoutmarket.Player;
+
 public class ScoutController {
     private ScoutView view;
     private AVLTree tree;
@@ -51,7 +55,7 @@ public class ScoutController {
         int goals = view.getIntInput("Enter current goals: ");
         int assists = view.getIntInput("Enter current assists: ");
         
-        // Matches the exact spelling from your Player.java file
+        
         newPlayer.updatePerfomance(goals, assists);
 
         // Save to the Models

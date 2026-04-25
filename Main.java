@@ -1,3 +1,6 @@
+import src.main.java.com.scoutmarket.AVLTree;
+import src.main.java.com.scoutmarket.MaxHeap;
+
 public class Main {
     public static void main(String[] args) {
         AVLTree myTree = new AVLTree();

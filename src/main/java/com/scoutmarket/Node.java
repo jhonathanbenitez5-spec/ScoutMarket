@@ -1,3 +1,4 @@
+package com.scoutmarket;
 public class Node {
     Player player;
     

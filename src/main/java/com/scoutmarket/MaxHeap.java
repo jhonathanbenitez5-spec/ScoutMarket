@@ -1,5 +1,9 @@
-import java.util.ArrayList;
+package com.scoutmarket;
 
+import java.util.ArrayList;
+import org.springframework.stereotype.Service;
+
+@Service
 public class MaxHeap {
     private ArrayList<Player> heap;
 
