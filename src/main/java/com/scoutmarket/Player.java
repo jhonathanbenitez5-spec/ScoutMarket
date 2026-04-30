@@ -1,7 +1,5 @@
 package com.scoutmarket;
 
-
-
 public class Player implements Comparable<Player>{
 
     private int playerID;
@@ -13,6 +11,15 @@ public class Player implements Comparable<Player>{
     private int assists;
     private long marketValue;
     private double performanceScore;
+    private int age;
+    private String nationality;
+    private int gamesPlayed;
+    private String position;
+    private long estimatedValue;
+    private String roiCategory;
+    private String height;
+    private int yellowCards;
+    private int redCards;
 
     public Player() {
     }
@@ -28,6 +35,12 @@ public class Player implements Comparable<Player>{
         this.goals = 0;
         this.assists = 0;
         this.performanceScore = 0.0;
+        this.age = 0;
+        this.nationality = "Unknown";
+        this.gamesPlayed = 0;
+        this.position = "Unknown";
+        this.estimatedValue = 0L;
+        this.roiCategory = "Pending";
 
     }
     public int getLeagueId() { return leagueId; }
@@ -48,6 +61,32 @@ public class Player implements Comparable<Player>{
     public int getPlayerID() { return playerID; }
     public String getName() { return name; }
     public double getPerformanceScore() { return performanceScore; }
+    public int getAge() { return age; }
+    public void setAge(int age) { this.age = age; }
+
+    public String getNationality() { return nationality; }
+    public void setNationality(String nationality) { this.nationality = nationality; }
+
+    public int getGamesPlayed() { return gamesPlayed; }
+    public void setGamesPlayed(int gamesPlayed) { this.gamesPlayed = gamesPlayed; }
+
+    public String getPosition() { return position; }
+    public void setPosition(String position) { this.position = position; }
+
+    public long getEstimatedValue() { return estimatedValue; }
+    public void setEstimatedValue(long estimatedValue) { this.estimatedValue = estimatedValue; }
+
+    public String getRoiCategory() { return roiCategory; }
+    public void setRoiCategory(String roiCategory) { this.roiCategory = roiCategory; }
+
+    public String getHeight() { return height; }
+    public void setHeight(String height) { this.height = height; }
+
+    public int getYellowCards() { return yellowCards; }
+    public void setYellowCards(int yellowCards) { this.yellowCards = yellowCards; }
+
+    public int getRedCards() { return redCards; }
+    public void setRedCards(int redCards) { this.redCards = redCards; }
 
     @Override
     public int compareTo(Player other) {
@@ -66,5 +105,6 @@ public class Player implements Comparable<Player>{
     public int getGoals() { return goals; }
     public int getAssists() { return assists; }
     public long getMarketValue() { return marketValue; }
+    
     
 }

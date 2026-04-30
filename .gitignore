@@ -1,1 +1,14 @@
+cat << 'EOF' > .gitignore
+# Compiled Java class files
 *.class
+target/
+
+# React dependencies
+scoutmarket-web/node_modules/
+scoutmarket-web/dist/
+
+# IDE / OS files
+.DS_Store
+.idea/
+*.iml
+EOF
