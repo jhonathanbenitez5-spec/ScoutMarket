@@ -4,6 +4,7 @@ import { Player } from './models/Player';
 import { PlayerCard } from './views/components/PlayerCard';
 import { ScoutForm } from './views/components/ScoutForm';
 import { PlayerModal } from './views/components/PlayerModal'; 
+import React from 'react';
 
 function App() {
   const [leaderboard, setLeaderboard] = useState<Player[]>([]);

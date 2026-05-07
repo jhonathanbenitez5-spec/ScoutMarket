@@ -5,8 +5,6 @@ public class Node {
     
     Node left;
     Node right;
-    
-    // This is a special number for the AVL Tree to stay balanced
     int height;
 
     // The Constructor: to create a new "Box"
