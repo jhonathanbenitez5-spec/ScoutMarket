@@ -7,7 +7,7 @@ public class Node {
     Node right;
     int height;
 
-    // The Constructor: to create a new "Box"
+    // The Constructor: to create a new Box
     public Node(Player player) {
         this.player = player;
         this.left = null;   // New nodes start with no children
