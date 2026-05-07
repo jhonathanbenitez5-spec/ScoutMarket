@@ -1,4 +1,4 @@
-name: ScoutMarket Enterprise CI
+name: ScoutMarket CI
 on:
   push:
     branches: [ "main" ]
