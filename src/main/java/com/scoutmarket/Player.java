@@ -106,5 +106,16 @@ public class Player implements Comparable<Player>{
     public int getAssists() { return assists; }
     public long getMarketValue() { return marketValue; }
     
+    public void setGoals(int goals) {
+        this.goals = goals;
+    }
+
+    public void setAssists(int assists) {
+        this.assists = assists;
+    }
+
+    public void setMarketValue(long marketValue) {
+        this.marketValue = marketValue;
+    }
     
 }
