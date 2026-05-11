@@ -11,7 +11,7 @@ import org.springframework.web.client.RestTemplate;
 @Service
 public class FootballApiService {
 
-    private static final String API_KEY = "de13b1508ffcbe2feda588f2ec5b8188"; 
+    private static final String API_KEY = "YOUR_API_KEY_HERE"; 
     private static final String API_HOST = "v3.football.api-sports.io";
     private static final String BASE_URL_PLAYERS = "https://v3.football.api-sports.io/players?";
 
